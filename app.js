@@ -10,7 +10,7 @@ input.addEventListener('keyup', function(e){
         let spanList = ""; // 
 
         listArr.forEach(function(element,index){ // listArr'nin herbir elemanı ve bu herbir elemanının index'i için
-            spanList += '<span value=' + index + '>#' + element + '<i class="fas fa-times"></i></span>'; // herbir enter'da spanlist'i yeniden oluştur.
+            spanList += '<span value=' + index + '>#' + element + '<i class="fas fa-times"></i></span>'; // herbir enter'da spanlist'i oluşturmaya devam et.
         });
 
         document.querySelector('.tags').innerHTML  = spanList; // kaç defa enter yapıldıysa o kadar oluşan spanları div'in içine html olarak gönder
@@ -27,7 +27,7 @@ div.addEventListener('click', (e)=>{ // div ve bunun childlarına her tıklandı
         let spanList = ""; // spanları yeniden oluşturuyorum
        
         listArr.forEach(function(element,index){
-            spanList += '<span value=' + index + '>#' + element + '<i class="fas fa-times"></i></span>';
+            spanList += '<span value=' + index + '>#' + element + '<i class="fas fa-times"></i></span>'; //spanları oluşturmaya devam et.
         });
 
         document.querySelector('.tags').innerHTML  = spanList; // bir tag'i kaldırdığımda tüm spanları yeniden div'in içinde oluştur..
