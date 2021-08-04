@@ -1,0 +1,137 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    height: 100vh;
+    display: grid;
+    place-items: center;
+    background-color: #ff7b00;
+}
+
+.container{
+    width: 300px;
+    max-height: 330px;
+    background: #fff;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 0 6px 2px rgba(0,0,0,0.2);
+     /*eklenen tagler alta eklenmeye devam edilsin*/
+}
+
+.head{
+    display: flex;
+    align-items: center;
+    color:#57606f;
+    margin-bottom: 3px;
+}
+
+.head .far{
+    margin-left: 5px;
+}
+
+.input-box{
+    position: relative;
+    width: 100%;
+    height: 35px;
+    margin-bottom: 10px;
+    background-color: #ced6e8;
+    border-radius: 5px;
+}
+
+.input-box input{
+    width: 100%;
+    height: 100%;
+    padding: 0 10px 0 40px;
+    border-radius: 5px;
+    border: 1px solid rgb(124, 121, 121);
+    outline:none;
+    background: transparent;
+    font-size: 1rem;
+    color:#57606f;
+}
+
+.input-box .fa-tags{
+    position: absolute;
+    top:50%;
+    left:12px;
+    transform: translateY(-50%);
+    color: #57606f;
+}
+
+.tags span{ /* js ile eklenecek spanlar için */
+    display: inline-block;
+    max-width: 100%;
+    padding: 2px 10px;
+    margin: 2px;
+    font-size: 0.9rem;
+    background-color: #ced6e0;
+    border-radius: 3px;
+    word-wrap: break-word;   
+}
+
+.tags span .fa-times{ /* js ile eklenecek spanların içindeki x ikonu için */
+    margin-left: 5px;
+    font-size: 10px;
+    cursor: pointer;
+}
+
+
+.tooltip {
+    position: relative;
+    display: inline-block;
+}
+
+.tooltip:hover{
+    cursor: pointer;
+}
+  
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: 120px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1;
+    bottom: 150%;
+    left: 50%;
+    margin-left: -60px;
+    
+}
+  
+.tooltip .tooltiptext::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: black transparent transparent transparent;
+}
+  
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+  }
+
+.git{
+    position: absolute;
+    top: 2%;
+    left: 2%;
+}
+
+button{
+    font-size: 1rem;
+    padding: 5px;
+    background-color: black;
+    color:white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: -1px 3px 10px 1px #000000;
+}
