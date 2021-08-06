@@ -5,8 +5,17 @@ let listArr = []; // span'ların text'lerini array olarak tutacak.
 input.addEventListener('keyup', function(e){
 
     if(e.keyCode === 13){ // enter tuşu keyup olursa
-        let inValue = input.value;
-        listArr.push(inValue.trim().replace(/\s/g,'')); // input value'sunu trim et ve aradaki boşlukları al ve listArr'de tut.
+        let inValue = input.value.trim().replace(/\s/g,'');
+        let splitList = inValue.split(','); // virgüle göre array oluştur.
+
+        for(let i = 0;i<splitList.length;i++){ // splitList arrayindeki herbir elemanı listArr'ye push et.
+
+            listArr.push(splitList[i]); // input value'sunu trim et ve aradaki boşlukları al ve listArr'de tut.
+
+        }
+
+        console.log(listArr)
+
         let spanList = ""; // 
 
         listArr.forEach(function(element,index){ // listArr'nin herbir elemanı ve bu herbir elemanının index'i için
